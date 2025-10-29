@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate | GreenFood</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Image preview styling */
+    .image-preview {
+      display: none;
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 2px solid #1E6F5C;
+      transition: transform 0.3s ease;
+    }
+    .image-preview:hover {
+      transform: scale(1.02);
+    }
+
+    /* Section divider */
+    .section-divider {
+      border-top: 2px solid #1E6F5C;
+      margin: 25px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #1E6F5C;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fw-bold fs-3" href="index.html">🌿 GreenFood</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav3">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav3">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="collect.html">Collect</a></li>
+          <li class="nav-item"><a class="nav-link text-light active" href="donate.html">Donate</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Donation Section -->
+  <section class="py-5" style="background-color: #FAF9F6;">
+    <div class="container">
+      <h2 class="fw-bold text-dark mb-4">Donate Food and Spread Happiness</h2>
+      <p class="mb-4">Your contribution brings smiles and helps us reduce food waste sustainably.</p>
+
+      <form class="p-4 bg-white rounded shadow" id="donationForm">
+        <!-- Basic Details -->
+        <div class="mb-3">
+          <label for="donorName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="donorName" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="donorLocation" class="form-label">Your Location</label>
+          <input type="text" class="form-control" id="donorLocation" placeholder="Enter your address" required>
+        </div>
+        <div class="mb-3">
+          <label for="donationDetails" class="form-label">Donation Details</label>
+          <textarea class="form-control" id="donationDetails" rows="3" placeholder="Describe what you are donating" required></textarea>
+        </div>
+
+        <!-- Freshness Details -->
+        <div class="section-divider"></div>
+        <h5 class="text-success mb-3">🍃 Freshness Details</h5>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="foodTemp" class="form-label">Food Temperature (°C)</label>
+            <input type="number" class="form-control" id="foodTemp" placeholder="e.g., 35" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="prepTime" class="form-label">Preparation Time</label>
+            <input type="datetime-local" class="form-control" id="prepTime" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="expiryDate" class="form-label">Expiry Date</label>
+            <input type="date" class="form-control" id="expiryDate" required>
+          </div>
+        </div>
+
+        <!-- Image Upload -->
+        <div class="section-divider"></div>
+        <div class="mb-3">
+          <label for="donationImage" class="form-label">Upload Food Image</label>
+          <input type="file" class="form-control" id="donationImage" accept="image/*">
+          <img id="imagePreview" class="image-preview" alt="Image Preview">
+        </div>
+
+        <button type="submit" class="btn w-100" style="background-color:#F4A261; color:#fff;">Submit Donation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4" style="background-color: #E76F51; color:#fff;">
+    <p class="mb-0">© 2025 GreenFood | Made with ❤️ for Sustainability</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Image Preview Logic -->
+  <script>
+    const imageInput = document.getElementById("donationImage");
+    const imagePreview = document.getElementById("imagePreview");
+
+    imageInput.addEventListener("change", function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.addEventListener("load", function() {
+          imagePreview.setAttribute("src", this.result);
+          imagePreview.style.display = "block";
+        });
+        reader.readAsDataURL(file);
+      } else {
+        imagePreview.style.display = "none";
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("donationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Thank you for donating! Your food details have been recorded successfully.");
+      this.reset();
+      imagePreview.style.display = "none";
+    });
+  </script>
+</body>
+</html>

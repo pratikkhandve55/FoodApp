@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenFood Coordination</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Scrolling Donors Bar */
+    .donor-bar {
+      background: linear-gradient(90deg, #2A9D8F, #1E6F5C);
+      color: #fff;
+      padding: 8px 0;
+      font-weight: 500;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .donor-bar span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Hero section layout */
+    .hero {
+      background-color: #1E6F5C;
+      color: #FAF9F6;
+      padding: 100px 20px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .impact-box {
+      background: #FAF9F6;
+      color: #1E6F5C;
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: left;
+      min-width: 280px;
+    }
+
+    .impact-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #E76F51;
+    }
+
+    .impact-box p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <video autoplay muted class="truck-video">
+      <source src="truck.mp4" type="video/mp4">
+    </video>
+    <p class="loading-text">Delivering Freshness...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #1E6F5C;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light fw-bold fs-3" href="#">🌿 GreenFood</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link text-light active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="collect.html">Collect</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="donate.html">Donate</a></li>
+            <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Scrolling Donor Names -->
+    <div class="donor-bar">
+      <span>✨ Recent Donors: Rajesh from Pune • Meera from Nashik • GreenBites Café • Rohan from Mumbai • Priya from Delhi • Anna Foundation • FoodJoy Co. • </span>
+    </div>
+
+    <!-- Hero Section with Impact Counters -->
+    <section class="hero text-center text-dark">
+      <div class="container py-5 hero-content">
+        <!-- Left side text -->
+        <div>
+          <h1 class="fw-bold">Nourishing Lives, Sustaining the Planet</h1>
+          <p class="lead">Together, we connect surplus food with those in need — building a world without hunger or waste.</p>
+          <button class="btn cta-btn">Get Started</button>
+        </div>
+
+        <!-- Right side live impact box -->
+        <div class="impact-box">
+          <h4>🌎 Live Impact</h4>
+          <p><strong>🥗 Food Saved:</strong> <span id="foodSaved">0</span> kg</p>
+          <p><strong>🔥 Calories Saved:</strong> <span id="caloriesSaved">0</span> kcal</p>
+          <p><strong>🌿 Carbon Reduced:</strong> <span id="carbonReduced">0</span> kg CO₂</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Album Section -->
+    
+<section class="album py-5" style="background-color: #FAF9F6;">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="images/im1.jpg" class="card-img-top" alt="…">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1E6F5C;"> Share More, Waste Less</h5>
+                <p class="card-text">Encourages people to donate and minimize food waste.</p>
+                <!-- <a href="#" class="btn btn-outline" style="border-color: #F4A261; color:#F4A261;">Read More</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="images/im2.jpg" class="card-img-top" alt="…">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1E6F5C;">Every Meal Matters</h5>
+                <p class="card-text">Highlights the impact of each contribution.</p>
+                <!-- <a href="#" class="btn btn-outline" style="border-color: #F4A261; color:#F4A261;">Read More</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="images/im3.jpg" class="card-img-top" alt="…">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #1E6F5C;">From Waste to Wonder</h5>
+                <p class="card-text">Shows the transformation from discarded food to meaningful help.</p>
+                <!-- <a href="#" class="btn btn-outline" style="border-color: #F4A261; color:#F4A261;">Read More</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background-color: #E76F51; color:#fff;">
+      <p class="mb-0">© 2025 GreenFood | Made with ❤️ for Sustainability</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Live Counter Script -->
+  <script>
+    // Live animation counters
+    let food = 0, calories = 0, carbon = 0;
+
+    function animateCounters() {
+      const foodEl = document.getElementById("foodSaved");
+      const calEl = document.getElementById("caloriesSaved");
+      const carbEl = document.getElementById("carbonReduced");
+
+      const interval = setInterval(() => {
+        if (food < 1250) {
+          food += 5;
+          calories += 20;
+          carbon += 3;
+          foodEl.textContent = food;
+          calEl.textContent = calories;
+          carbEl.textContent = carbon;
+        } else {
+          clearInterval(interval);
+        }
+      }, 50);
+    }
+
+    window.addEventListener("load", animateCounters);
+  </script>
+</body>
+</html>
+
+add something  on right side of the main moto which on the green screen : food saved from wasting, calories saved wasting, carbon emmission reduced 
+on the top below the nav bar it should have scrolling text of names of the recent donors
