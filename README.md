@@ -1,8 +1,5 @@
 # 🍲 FoodApp - Save Food, Save Lives
 
-<p align="center">
-  <img src="images/logo.png" alt="FoodApp Logo" width="200">
-</p>
 
 <h3 align="center">
 Connecting Food Donors with People in Need
