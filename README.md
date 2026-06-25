@@ -63,7 +63,7 @@ The project was originally created for a competition with a mission to **save li
 ## 🏠 Home Page
 
 <p align="center">
-  <img src="home.png" alt="Home Page" width="900">
+  <img src="images/home.png" alt="Home Page" width="900">
 </p>
 
 ---
@@ -71,7 +71,7 @@ The project was originally created for a competition with a mission to **save li
 ## 📦 Collection Page
 
 <p align="center">
-  <img src="collect.png" alt="Collection Page" width="900">
+  <img src="images/collect.png" alt="Collection Page" width="900">
 </p>
 
 ---
@@ -79,7 +79,7 @@ The project was originally created for a competition with a mission to **save li
 ## ❤️ Donate Page
 
 <p align="center">
-  <img src="donate.png" alt="Donate Page" width="900">
+  <img src="images/donate.png" alt="Donate Page" width="900">
 </p>
 
 ---
@@ -87,7 +87,7 @@ The project was originally created for a competition with a mission to **save li
 ## 📞 Contact Page
 
 <p align="center">
-  <img src="contact.png" alt="Contact Page" width="900">
+  <img src="images/contact.png" alt="Contact Page" width="900">
 </p>
 
 ---
